@@ -1,0 +1,13 @@
+server:
+  port: 9050
+eureka:
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: gateway-zuul
+zuul:
+  routes:
+     accout-service-id:
+       path: /account/**
+       service-id: account-service
